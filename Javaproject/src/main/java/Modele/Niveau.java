@@ -6,6 +6,8 @@
 
 package Modele;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Salim LOUHMADI, Theo BEAUJOIS, Irenee JOSSE
@@ -25,9 +27,13 @@ public class Niveau {
     
     // Setter
     public void setId(String s){
-        this.id = i;
+        this.id = s;
     }
     public void setNom(String s){
         this.nom = s;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.nom = A.get(1);
     }
 }

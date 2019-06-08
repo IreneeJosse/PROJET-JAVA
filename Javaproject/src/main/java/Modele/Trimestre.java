@@ -4,7 +4,12 @@
  * and open the template in the editor.
  */
 package Modele;
+
+// Imports
+import java.util.ArrayList;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.text.ParseException;
 
 /**
  *
@@ -25,7 +30,7 @@ public class Trimestre {
     public int getNum(){
         return num;
     }
-    public int getAnneeId(){
+    public String getAnneeId(){
         return anneeId;
     }
     public Date getDateDebut(){
@@ -50,5 +55,17 @@ public class Trimestre {
     }
     public void setDateFin(Date d){
         this.dateFin = d;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.num = Integer.parseInt(A.get(1));
+        this.anneeId = A.get(2);
+        try{
+            SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+            this.dateDebut = formatDate.parse(A.get(3));
+            this.dateFin = formatDate.parse(A.get(4));
+        } catch (ParseException e) {
+            
+        }
     }
 }

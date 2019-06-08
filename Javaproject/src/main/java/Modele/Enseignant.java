@@ -6,11 +6,13 @@
 
 package Modele;
 
+// Imports
+import java.util.ArrayList;
 /**
  *
  * @author Salim LOUHMADI, Theo BEAUJOIS, Irenee JOSSE
  */
-public class Personne {
+public class Enseignant {
     // Variables
     String id;
     String nom;
@@ -37,5 +39,10 @@ public class Personne {
     }
     public void setPrenom (String s){
         this.prenom = s;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.nom = A.get(1);
+        this.prenom = A.get(2);
     }
 }
