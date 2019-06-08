@@ -6,6 +6,8 @@
 
 package Modele;
 
+// Imports
+import java.util.ArrayList;
 /**
  *
  * @author Salim LOUHMADI, Theo BEAUJOIS, Irenee JOSSE
@@ -43,5 +45,11 @@ public class Enseignement {
     }
     public void setEnseignantId(String s){
         this.enseignantId = s;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.classeId = A.get(1);
+        this.disciplineId = A.get(2);
+        this.enseignantId = A.get(3);
     }
 }

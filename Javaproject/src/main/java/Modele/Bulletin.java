@@ -5,6 +5,9 @@
  */
 package Modele;
 
+// Imports
+import java.util.ArrayList;
+
 /**
  *
  * @author SalimLOUHMADI, Theo BEAUJOIS, Irenee JOSSE
@@ -13,7 +16,7 @@ package Modele;
 public class Bulletin {
     // Variables
     String id;
-    String incriptionId;
+    String inscriptionId;
     String trimestreId;
     String appreciation;
     
@@ -43,6 +46,12 @@ public class Bulletin {
     }
     public void setAppreciation(String s){
         this.appreciation = s;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.inscriptionId = A.get(1);
+        this.trimestreId = A.get(2);
+        this.appreciation = A.get(3);
     }
     
 }

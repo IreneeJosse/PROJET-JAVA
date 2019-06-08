@@ -6,6 +6,9 @@
 
 package Modele;
 
+// Imports
+import java.util.ArrayList;
+
 /**
  *
  * @author Salim LOUHMADI, Theo BEAUJOIS, Irenee JOSSE
@@ -14,7 +17,7 @@ package Modele;
 public class Inscription {
     // Variables
     String id;
-    String classId;
+    String classeId;
     String eleveId;
 
     // Getter
@@ -37,5 +40,10 @@ public class Inscription {
     }
     public void setEleveId(String s){
         this.eleveId = s;
+    }
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.classeId = A.get(1);
+        this.eleveId = A.get(2);
     }
 }

@@ -6,6 +6,9 @@
 
 package Modele;
 
+// Imports
+import java.util.ArrayList;
+
 /**
  *
  * @author Salim LOUHMADI, Theo BEAUJOIS, Irenee JOSSE
@@ -20,7 +23,7 @@ public class Classe{
 
     // Getter
     public String getId(){
-        return Id;
+        return id;
     }
     public String getNom(){
         return nom;
@@ -28,11 +31,11 @@ public class Classe{
     public String getAnneeScolaireId(){
         return anneeScolaireId;
     }
-    public String getNiveauId()){
-        return NiveauId;
+    public String getNiveauId(){
+        return niveauId;
     }
     public String getEcoleId(){
-        return EcoleId;
+        return ecoleId;
     }
 
     // Setter
@@ -50,5 +53,13 @@ public class Classe{
     }
     public void setEcoleId(String s){
         this.ecoleId = s;
+    }
+    
+    public void setAll(ArrayList<String> A){
+        this.id = A.get(0);
+        this.nom = A.get(1);
+        this.anneeScolaireId = A.get(2);
+        this.niveauId = A.get(3);
+        this.ecoleId = A.get(4);
     }
 }
